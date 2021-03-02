@@ -9,7 +9,7 @@
 
 Клонируйте репозиторий с GitHub
 ```
-git clone url
+git clone https://github.com/kutuzov13/Bitly-URL-shorter.git
 ```
 Установите зависимости
 ```cmd
