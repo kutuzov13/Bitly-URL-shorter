@@ -35,7 +35,7 @@ python main.py --link https://bit.ly/3bcdiFH -> (Укороченная ссыл
 ```python
 bitlink_token = os.getenv('BITLINK_TOKEN')
 ```
-Токен для обращения к Api Bitly. Можно получить в личном кабинете Bitly
+Токен для обращения к Api Bitly. Можно получить в личном кабинете ***[Bitly](https://bitly.com/)***
 
 ### Библиотеки
 - requests - для запросов к Api Bitly
