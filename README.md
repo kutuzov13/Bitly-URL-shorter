@@ -18,11 +18,11 @@ pip install -r requirements.txt
 ### Запуск
 Запустите скрипт передав ссылку:
 ```
-python main.py --link https://github.com/
+python main.py https://github.com/
 ```
 Или
 ```
-python main.py --link https://bit.ly/3bcdiFH -> (Укороченная ссылка)
+python main.py https://bit.ly/3bcdiFH -> (Укороченная ссылка)
 ```
 
 
