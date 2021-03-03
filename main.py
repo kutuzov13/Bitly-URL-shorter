@@ -40,7 +40,7 @@ def main():
     parser = argparse.ArgumentParser(
         description='Сокращает ссылку, если ссылка уже сокращена покажет количество кликов по ней'
     )
-    parser.add_argument('--link', help='Ваша ссылка')
+    parser.add_argument('link', help='Ваша ссылка')
     args = parser.parse_args()
     try:
         if is_link_bitlink(bitlink_token, args.link):
