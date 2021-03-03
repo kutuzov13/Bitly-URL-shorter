@@ -1,9 +1,10 @@
 import argparse
 import os
-from urllib.parse import urlparse
 
+import dotenv
 import requests
-from dotenv import load_dotenv
+
+from urllib.parse import urlparse
 
 
 def is_link_bitlink(token, bitlink):
@@ -35,13 +36,13 @@ def get_count_clicks(token, bitlink):
 
 
 def main():
-    load_dotenv()
+    dotenv.load_dotenv()
     bitlink_token = os.getenv('BITLINK_TOKEN')
 
     parser = argparse.ArgumentParser(
-        description='Сокращает ссылку, если ссылка уже сокращена покажет количество кликов по ней'
+        description='Shortens the link, if the link is already shortened, the number of clicks on it will be shown'
     )
-    parser.add_argument('link', help='Ваша ссылка')
+    parser.add_argument('link', help='You link')
     args = parser.parse_args()
     try:
         if is_link_bitlink(bitlink_token, args.link):
