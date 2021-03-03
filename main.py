@@ -1,10 +1,9 @@
 import argparse
 import os
-
-import dotenv
-import requests
-
 from urllib.parse import urlparse
+
+import requests
+from dotenv import load_dotenv
 
 
 def is_link_bitlink(token, bitlink):
@@ -36,7 +35,7 @@ def get_count_clicks(token, bitlink):
 
 
 def main():
-    dotenv.load_dotenv()
+    load_dotenv()
     bitlink_token = os.getenv('BITLINK_TOKEN')
 
     parser = argparse.ArgumentParser(
