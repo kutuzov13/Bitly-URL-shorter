@@ -15,6 +15,13 @@ git clone https://github.com/kutuzov13/Bitly-URL-shorter.git
 ```cmd
 pip install -r requirements.txt
 ```
+### Переменные окружения
+Токен берется из переменных окружения.
+- Создайте файл ```.env``` рядом с ```main.py```.
+- Запишите токен в файл ```.env```: VARIABLE='YOU_TOKEN'.
+
+Токен для обращения к Api Bitly. Можно получить в личном кабинете ***[Bitly](https://bitly.com/)***.
+
 ### Запуск
 Запустите скрипт передав ссылку:
 ```
@@ -24,14 +31,6 @@ python main.py https://github.com/
 ```
 python main.py https://bit.ly/3bcdiFH -> (Укороченная ссылка)
 ```
-
-
-### Переменные окружения
-Токен берется из переменных окружения.
-- Создайте файл ```.env``` рядом с ```main.py```.
-- Запишите токен в файл ```.env```: VARIABLE='YOU_TOKEN'.
-
-Токен для обращения к Api Bitly. Можно получить в личном кабинете ***[Bitly](https://bitly.com/)***.
 
 ### Библиотеки
 - requests - для запросов к Api Bitly.
