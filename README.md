@@ -15,6 +15,13 @@ git clone https://github.com/kutuzov13/Bitly-URL-shorter.git
 ```cmd
 pip install -r requirements.txt
 ```
+
+```python
+# для запросов к Api Bitly.
+import requests 
+# для обращения к переменным окружения.
+from dotenv import load_dotenv 
+```
 ### Переменные окружения
 Токен берется из переменных окружения.
 - Создайте файл ```.env``` рядом с ```main.py```.
@@ -31,10 +38,6 @@ python main.py https://github.com/
 ```
 python main.py https://bit.ly/3bcdiFH -> (Укороченная ссылка)
 ```
-
-### Библиотеки
-- requests - для запросов к Api Bitly.
-- python-dotenv - для обращения к переменным окружения.
 
 #### Цели проекта
 Код написан в учебных целях на онлайн-курсе для веб-разработчиков ***[dvmn.org](https://dvmn.org/modules/)***.
