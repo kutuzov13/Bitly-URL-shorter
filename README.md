@@ -1,43 +1,45 @@
 ## Bitly URL shorter
 
-Этот скрипт для сокращения ссылок с помощью сервиса ***[Bitly](https://bitly.com/)***.
+This script for shortening links using the service ***[Bitly](https://bitly.com/)***.
 
-Если передать скрипту уже сокращенную ссылку, вы получите количество переходов по ссылке.
+If you follow the already shortened link, you will get the number of clicks on the link.
 
-### Как установить
-Для запуска скрипта вам понадобиться Python3!
+### Install
+You need Python3 to run the script!
 
-Клонируйте репозиторий с GitHub.
+Clone a repository from GitHub.
 ```
 git clone https://github.com/kutuzov13/Bitly-URL-shorter.git
 ```
-Установите зависимости.
+
+Install Requirements.
 ```
 pip install -r requirements.txt
 ```
-### Библиотеки
+
+### Libraries
 ```python
-# для запросов к API Bitly.
+# For requests to API Bitly.
 import requests 
-# для обращения к переменным окружения.
+# to access environment variables.
 from dotenv import load_dotenv 
 ```
-### Переменные окружения
-Токен берется из переменных окружения.
-- Создайте файл ```.env``` рядом с ```main.py```.
-- Запишите токен в файл ```.env```: ```BITLINK_TOKEN='YOU_TOKEN'```.
+### Environment Variables
+The token is taken from environment variables.
+- Create a file ```.env``` next to the file ```main.py```.
+- Write the token to a file ```.env```: ```BITLINK_TOKEN='YOU_TOKEN'```.
 
-Токен для обращения к API Bitly. Можно получить в личном кабинете ***[Bitly](https://bitly.com/)***.
+Bitly API Access Token. The token can be obtained in your personal account ***[Bitly](https://bitly.com/)***.
 
-### Запуск
-Запустите скрипт передав ссылку:
+### Start
+Run the script by passing the link:
 ```
 python main.py https://github.com/
 ```
-Или
+or
 ```
-python main.py https://bit.ly/3bcdiFH -> (Укороченная ссылка)
+python main.py https://bit.ly/3bcdiFH -> (Shortened link)
 ```
 
-#### Цели проекта
-Код написан в учебных целях на онлайн-курсе для веб-разработчиков ***[dvmn.org](https://dvmn.org/modules/)***.
+#### Target
+The code is written for educational purposes as an online course for web developers ***[dvmn.org](https://dvmn.org/modules/)***.
