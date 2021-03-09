@@ -5,19 +5,19 @@
 Если передать скрипту уже сокращенную ссылку, вы получите количество переходов по ссылке.
 
 ### Как установить
-Для запуска скрипта вам понадобиться Python 3-ей версии!
+Для запуска скрипта вам понадобиться Python3!
 
 Клонируйте репозиторий с GitHub.
 ```
 git clone https://github.com/kutuzov13/Bitly-URL-shorter.git
 ```
 Установите зависимости.
-```cmd
+```
 pip install -r requirements.txt
 ```
 ### Библиотеки
 ```python
-# для запросов к Api Bitly.
+# для запросов к API Bitly.
 import requests 
 # для обращения к переменным окружения.
 from dotenv import load_dotenv 
@@ -27,7 +27,7 @@ from dotenv import load_dotenv
 - Создайте файл ```.env``` рядом с ```main.py```.
 - Запишите токен в файл ```.env```: ```BITLINK_TOKEN='YOU_TOKEN'```.
 
-Токен для обращения к Api Bitly. Можно получить в личном кабинете ***[Bitly](https://bitly.com/)***.
+Токен для обращения к API Bitly. Можно получить в личном кабинете ***[Bitly](https://bitly.com/)***.
 
 ### Запуск
 Запустите скрипт передав ссылку:
