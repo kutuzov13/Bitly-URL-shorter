@@ -34,15 +34,21 @@ def get_count_clicks(token, bitlink):
     return response.json().get('total_clicks')
 
 
-def main():
-    load_dotenv()
-    bitlink_token = os.getenv('BITLINK_TOKEN')
-
+def create_parser():
     parser = argparse.ArgumentParser(
         description='Shortens the link, if the link is already shortened, the number of clicks on it will be shown'
     )
     parser.add_argument('link', help='You link')
+    return parser
+
+
+def main():
+    load_dotenv()
+    bitlink_token = os.getenv('BITLINK_TOKEN')
+
+    parser = create_parser()
     args = parser.parse_args()
+
     try:
         if is_link_bitlink(bitlink_token, args.link):
             print(f'Counting clicks on a link: {get_count_clicks(bitlink_token, args.link)}')
