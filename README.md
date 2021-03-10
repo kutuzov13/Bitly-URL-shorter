@@ -1,4 +1,4 @@
-## Bitly URL shorter
+## URL shorter
 
 This script for shortening links using the service ***[Bitly](https://bitly.com/)***.
 
