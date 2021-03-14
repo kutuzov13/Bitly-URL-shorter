@@ -32,13 +32,13 @@ The token is taken from environment variables.
 Bitly API Access Token. The token can be obtained in your personal account ***[Bitly](https://bitly.com/)***.
 
 ### Start
-Run the script by passing the link:
+Run the script by passing the link to shorten:
 ```
 python main.py https://github.com/
 ```
-or
+Run the script, passing the already shortened link to get the number of clicks on the link
 ```
-python main.py https://bit.ly/3bcdiFH -> (Shortened link)
+python main.py https://bit.ly/3bcdiFH 
 ```
 
 #### Target
