@@ -42,4 +42,4 @@ python main.py https://bit.ly/3bcdiFH
 ```
 
 #### Target
-The code is written for educational purposes as an online course for web developers ***[dvmn.org](https://dvmn.org/modules/)***.
+The code is written for educational purposes as an online course for web developers ***[dvmn.org](https://dvmn.org/referrals/LKx4rvFOn7SwkzhVrznRuPRs6KUOF6jkJH2oImC2/)***.
