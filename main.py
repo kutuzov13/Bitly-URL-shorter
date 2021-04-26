@@ -49,7 +49,7 @@ def get_count_clicks(token: str, bitlink: str) -> str:
 
 
 def main():
-    """Show short link or counting clicks on a link."""
+    """Return short link or counting clicks on a link."""
     load_dotenv()
     bitlink_token = os.getenv('BITLINK_TOKEN')
 
