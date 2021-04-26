@@ -6,7 +6,16 @@ import requests
 from dotenv import load_dotenv
 
 
-def is_link_bitlink(token, bitlink) -> bool:
+def create_parser():
+    """Create arguments for parser."""
+    parser = argparse.ArgumentParser(
+        description='Shortens the link, if the link is already shortened, the number of clicks on it will be shown',
+    )
+    parser.add_argument('link', help='You link')
+    return parser
+
+
+def is_link_bitlink(token: str, bitlink) -> bool:
     """Check is link bitlink."""
     parsed_link = urlparse(bitlink)
     headers = {'Authorization': token}
@@ -15,7 +24,7 @@ def is_link_bitlink(token, bitlink) -> bool:
     return response.ok
 
 
-def get_shorten_link(token, link):
+def get_shorten_link(token: str, link: str) -> str:
     """Shorten received link."""
     create_bitlink_url = 'https://api-ssl.bitly.com/v4/bitlinks'
     payload = {'long_url': link}
@@ -25,7 +34,7 @@ def get_shorten_link(token, link):
     return response.json().get('link')
 
 
-def get_count_clicks(token, bitlink):
+def get_count_clicks(token: str, bitlink: str) -> str:
     """Show quantity of clicks on link."""
     parsed_link = urlparse(bitlink)
     payload = {
@@ -37,15 +46,6 @@ def get_count_clicks(token, bitlink):
     response = requests.get(count_bitlink, params=payload, headers=headers)
     response.raise_for_status()
     return response.json().get('total_clicks')
-
-
-def create_parser():
-    """Create arguments for parser."""
-    parser = argparse.ArgumentParser(
-        description='Shortens the link, if the link is already shortened, the number of clicks on it will be shown',
-    )
-    parser.add_argument('link', help='You link')
-    return parser
 
 
 def main():
